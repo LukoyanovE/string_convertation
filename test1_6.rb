@@ -9,9 +9,6 @@
 #
 # made on simple implemetation of linked list
 # this allow to give O(N) in 'B' * N + 'A', and 'A' + 'B' * N
-#
-# TODO(Evgeny Lukoyanov) maybe needs to implement in some other variant
-# because randomly generated string give us O(N^2) :(
 module StringConvertation
 
   # Class for elements of two-dimensial linked list
@@ -60,12 +57,14 @@ module StringConvertation
 
     def to_s
       cur = @head
-      res = ""
+      res = []
+
       until cur.nil?
-        res += cur.to_s
+        res.push "#{cur}"
         cur = cur.next
       end
-      res
+
+      res.join
     end
 
     # Removes node from list.

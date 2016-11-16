@@ -38,6 +38,7 @@ g1 = g05 * 2
 g2 = g1 * 2
 g4 = g2 * 2
 g8 = g4 * 2
+g16 = g8 * 2
 
 
 Benchmark.bm(18) do |x|
@@ -61,4 +62,5 @@ Benchmark.bm(18) do |x|
   x.report("rand 200000") { 1.times do ; solution(g2); end }
   x.report("rand 400000") { 1.times do ; solution(g4); end }
   x.report("rand 800000") { 1.times do ; solution(g8); end }
+  x.report("rand 1600000") { 1.times do ; solution(g16); end }
 end
